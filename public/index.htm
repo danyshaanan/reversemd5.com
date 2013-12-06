@@ -91,14 +91,12 @@ $(function() {
 
   <div class='text'>
     <h4>Hello!</h4>
-    This is a small project I've created mainly for educational purposes. In the core of it is a database containing a table of strings and their md5 sums. The user can either search if an md5 sum is listed in the table, and if so, receive its source string, or just input a string and get its md5 sum. When that happens, the string and its md5 sum are added to the database, thus expanding it with likely strings. That by itself is a simple (and existing) mechanism, but it allowed me to create a small site that incopretates a few different languages and technologies;
-    <ul>
-      <li>HTML and CSS are obviously used to format and style this page.</li>
-      <li>Native Javascript is used in <a href='http://pajhome.org.uk/crypt/md5/'>Paul Johnston's md5 implementation</a> to calculate the sum on the client side.</li>
-      <li>jQuery powered AJAX is used to send the plain strings and the md5 sums to the server.</li>
-      <li>PHP and MySQL are used on the server to receive plain strings, calculate their sums, and store them in a database, and to check if requested md5 sums are already calculated in the database, and if so, to return them.</li>
-      <li>Python was used to generate the initial database.</li>
-    </ul>
+    This is a small project I've created mainly for educational purposes. In the core of it is a database containing a table of strings and their md5 sums. The user can either search if an md5 sum is listed in the table, and if so, receive its source string, or just input a string and get its md5 sum. When that happens, the string and its md5 sum are added to the database, thus expanding it with likely strings. This is not new or very complex, but it's a nice usage example for MySQL, PHP, HTML, CSS, JavaScript, AJAX, and Python.
+    <br /><br />
+    Fork, view, or participate in the project in its <a href='https://github.com/danyshaanan/reversemd5'>Github page</a>.
+    <br /><br />
+    The client calculates md5 sums using <a href='http://pajhome.org.uk/crypt/md5/'>Paul Johnston's md5 implementation in JavaScript</a>.
+    <br /><br />
     Enjoy!
   </div>
 
