@@ -28,34 +28,41 @@ a:hover   { color: #AD7C23; text-decoration: underline; }
 <script type='text/javascript' src='js/md5-min.js'></script>
 <script type='text/javascript'>
 
+var md5
+  , str
+  , md5res
+  , strres
+  , phpPath = 'php/ajax.php'
+  ;
+
 function md5Updated() {
-  md5val = md5.val().toLowerCase();
-  if (!md5val.match(/^[a-f0-9]*$/i)) {
+  var md5val = md5.val().toLowerCase();
+  if (!/^[a-f0-9]*$/i.test(md5val)) {
     strres.html('md5 sum should be a hex string, meaning, composed only from 0-9 and a-f.');
   } else if (md5val.length != 32) {
-    strres.html(md5val.length + "/32 characters, " + (32 - md5val.length) + " to go.");
+    strres.html([md5val.length, "/32 characters, ", 32 - md5val.length, " to go."].join(''));
   } else if (md5val == 'd41d8cd98f00b204e9800998ecf8427e') {
-    strres.html("''");
+    strres.html('"" (Empty string)');
   } else {
     strres.html("Searching...");
-    $.post('php/ajax.php', { md5 : md5val }, function(data) {
-      strres.html(data == '' ? "Sorry, not found." : "'" + data.replace(/ /g,'&nbsp;') + "'");
+    $.post(phpPath, { md5 : md5val }, function(data) {
+      strres.html(data ? ['"','"'].join(data.replace(/ /g,'&nbsp;')) : "Sorry, not found.");
     });
   }
 }
 
 function strUpdated() {
-  strval = str.val();
-  md5val = hex_md5(strval);
-  md5res.text("'" + md5val + "'");
-  $.post("php/ajax.php", { str : strval });
+  var strval = str.val();
+  var md5val = hex_md5(strval);
+  md5res.text(['"','"'].join(md5val));
+  $.post(phpPath, { str : strval });
 }
 
 $(function() {
-  window.md5 = $('#md5');
-  window.str = $('#str');
-  window.md5res = $('#md5res');
-  window.strres = $('#strres');
+  md5 = $('#md5');
+  str = $('#str');
+  md5res = $('#md5res');
+  strres = $('#strres');
   md5.keyup(md5Updated).keyup();
   str.keyup(strUpdated).keyup();
 });
