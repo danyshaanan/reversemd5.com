@@ -3,7 +3,7 @@
 require_once '../../config.php'; //config.php sets the values of $SqlUser and of $SqlPass
 
 function set($str,$md5) {
-  $args = array($str,$md5,$_SERVER['SERVER_ADDR']);
+  $args = array($str,$md5,$_SERVER['SERVER_ADDR']); //TODO: FIX! this should be user address, not server
   $args = array_map('mysql_real_escape_string', $args);
   array_unshift($args, "INSERT IGNORE INTO md5 (str, md5, ip) VALUES( '%s' , '%s' , '%s' )");
   $query = call_user_func_array('sprintf', $args);
