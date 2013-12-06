@@ -1,8 +1,8 @@
 
 body    { font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #333; background: #feb url('/img/bg.png'); }
-div#wrap  { width: 900px; max-width: 100%; margin: 0 auto; }
+div#wrap  { width: 62em; max-width: 100%; margin: 0 auto; }
 div.header  { text-shadow: 2px 2px 3px #a97; color: #000; }
-div.text  { margin-bottom: 20px; display:inline-block; padding: 25px; border-radius: 11px; background-color: rgba(224, 184, 119, 0.6); width: 100%; border: 1px solid #8C734B; }
+div.text  { margin-bottom: 20px; display:inline-block; padding: 20px; border-radius: 11px; background-color: rgba(205,188,137,0.6); width: 100%; }
 input   { height: 14px; width: 20em; background: #fff; }
 
 h4    { margin-top: 0em; }
