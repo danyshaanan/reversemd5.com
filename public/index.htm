@@ -5,10 +5,60 @@
 <title>Reverse md5 Calculator</title>
 <!--meta name='googlebot' content='NOINDEX, NOFOLLOW,noarchive,nosnippet'-->
 <!--meta name='robots'    content='NOINDEX, NOFOLLOW,noarchive,nosnippet'-->
-<link href='css/style.css' rel='stylesheet' type='text/css'>
+<!-- <link href='css/style.css' rel='stylesheet' type='text/css'> -->
+<style>
+
+body    { font-size: 14px; font-family: Helvetica, Arial, sans-serif; color: #333; background: #feb url('/img/bg.png'); }
+div#wrap  { width: 62em; max-width: 100%; margin: 0 auto; }
+div.header  { text-shadow: 2px 2px 3px #a97; color: #000; }
+div.text  { margin-bottom: 20px; display:inline-block; padding: 20px; border-radius: 11px; background-color: rgba(205,188,137,0.6); width: 100%; }
+input   { height: 14px; width: 20em; background: #fff; }
+
+h4    { margin-top: 0em; }
+
+a:link,
+a:visited,
+a:active  { color: #AD7C23; text-decoration: none; }
+a:hover   { color: #AD7C23; text-decoration: underline; }
+
+</style>
 <script type='text/javascript' src='js/jquery-1.6.2.min.js'></script>
 <script type='text/javascript' src='js/md5-min.js'></script>
-<script type='text/javascript' src='js/ajax.js'></script>
+<script type='text/javascript'>
+
+function md5Updated() {
+  md5val = md5.val().toLowerCase();
+  if (!md5val.match(/^[a-f0-9]*$/i)) {
+    strres.html('md5 sum should be a hex string, meaning, composed only from 0-9 and a-f.');
+  } else if (md5val.length != 32) {
+    strres.html(md5val.length + "/32 characters, " + (32 - md5val.length) + " to go.");
+  } else if (md5val == 'd41d8cd98f00b204e9800998ecf8427e') {
+    strres.html("''");
+  } else {
+    strres.html("Searching...");
+    $.post('php/ajax.php', { md5 : md5val }, function(data) {
+      strres.html(data == '' ? "Sorry, not found." : "'" + data.replace(/ /g,'&nbsp;') + "'");
+    });
+  }
+}
+
+function strUpdated() {
+  strval = str.val();
+  md5val = hex_md5(strval);
+  md5res.text("'" + md5val + "'");
+  $.post("php/ajax.php", { str : strval });
+}
+
+$(function() {
+  window.md5 = $('#md5');
+  window.str = $('#str');
+  window.md5res = $('#md5res');
+  window.strres = $('#strres');
+  md5.keyup(md5Updated).keyup();
+  str.keyup(strUpdated).keyup();
+});
+
+</script>
 </head>
 
 <body>
