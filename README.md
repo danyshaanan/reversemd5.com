@@ -1,15 +1,24 @@
-reversemd5
-==========
 
+# reversemd5
+A reverse-md5 lookup database for the web, which adds user string-to-md5 queries to the the database.
 
-This is a one-page site which checks a databases for reverse md5-sums,
-and offers md5 strings calculations, which it adds to the database.
+Database is MySQL, original data rendered in Python, server side code is PHP, the client is HTML, Css, and JavaScript, and uses AJAX for server queries.
 
-It is made up out of small amounts of each of:
-html, css, php, javascript, jquery, ajax, mysql and python.
+I've transfered the (old) project to github, and now making the code a bit nicer and more correct.
 
+See in action [here](http://reversemd5.com)
 
-Thanks to Paul Jhonston et al whose JavaScript implementation of the MD5 function is used here.
-(details in public/md5-min.js)
+* * *
+### Setup
+```bash
+...
+```
 
-See my implementation at http://reversemd5.com
+* * *
+### Info
+* ...
+* ...
+
+* * *
+### Notes
+...
