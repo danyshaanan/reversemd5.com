@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../config.php'; //config.php sets the values of $SqlUser and of $SqlPass
+require_once '../../config.php'; //config.php sets the values of $SqlUser, $SqlPass and of $SqlDB
 
 function set($str,$md5) {
   $args = array($str,$md5,$_SERVER['SERVER_ADDR']); //TODO: FIX! this should be user address, not server
@@ -18,7 +18,7 @@ function get($md5) {
 
 if (!isset($connection)) {
   $connection = mysql_connect('localhost',$SqlUser,$SqlPass) or die(mysql_error());
-  mysql_select_db("md5") or die(mysql_error());
+  mysql_select_db($SqlDB) or die(mysql_error());
 }
 
 if     ($_REQUEST['str']) set($_REQUEST['str'],md5($_REQUEST['str']));
