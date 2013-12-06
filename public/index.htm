@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+<title>Reverse md5 Calculator</title>
+<!--meta name='googlebot' content='NOINDEX, NOFOLLOW,noarchive,nosnippet'-->
+<!--meta name='robots'    content='NOINDEX, NOFOLLOW,noarchive,nosnippet'-->
+<link href='css/style.css' rel='stylesheet' type='text/css'>
+<script type='text/javascript' src='js/jquery-1.6.2.min.js'></script>
+<script type='text/javascript' src='js/md5-min.js'></script>
+<script type='text/javascript' src='js/ajax.js'></script>
+</head>
+
+<body>
+<div id='wrap'>
+
+  <div class='header'>
+    <h1 >md5 and reverse md5 calculator</h1>
+    <h3>A small web project by <a href='//danyshaanan.com'>Dany Shaanan</a></h3>
+  </div>
+
+  <div class='text'>
+    <h4>String to md5:</h4>
+    md5('<input id='str' size='36' maxlength='32' />') = <span id='md5res'></span>
+  </div>
+  <br />
+
+  <div class='text'>
+    <h4>md5 to string:</h4>
+    reverse_md5('<input id='md5' size='36' maxlength='32' />') = <span id='strres'></span>
+  </div>
+
+  <div class='text'>
+    <h4>Hello!</h4>
+    This is a small project I've created mainly for educational purposes. In the core of it is a database containing a table of strings and their md5 sums. The user can either search if an md5 sum is listed in the table, and if so, receive its source string, or just input a string and get its md5 sum. When that happens, the string and its md5 sum are added to the database, thus expanding it with likely strings. That by itself is a simple (and existing) mechanism, but it allowed me to create a small site that incopretates a few different languages and technologies;
+    <ul>
+      <li>HTML and CSS are obviously used to format and style this page.</li>
+      <li>Native Javascript is used in <a href='http://pajhome.org.uk/crypt/md5/'>Paul Johnston's md5 implementation</a> to calculate the sum on the client side.</li>
+      <li>jQuery powered AJAX is used to send the plain strings and the md5 sums to the server.</li>
+      <li>PHP and MySQL are used on the server to receive plain strings, calculate their sums, and store them in a database, and to check if requested md5 sums are already calculated in the database, and if so, to return them.</li>
+      <li>Python was used to generate the initial database.</li>
+    </ul>
+    Enjoy!
+  </div>
+
+</div>
+
+<a href="https://github.com/danyshaanan/reversemd5"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/img/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37608578-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
