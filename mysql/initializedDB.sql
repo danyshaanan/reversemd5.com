@@ -25,11 +25,9 @@ DROP TABLE IF EXISTS `md5`;
 CREATE TABLE `md5` (
   `str` varchar(32) DEFAULT NULL,
   `md5` varchar(32) DEFAULT NULL,
-  `ip` varchar(15) DEFAULT NULL,
   UNIQUE KEY `str` (`str`),
   KEY `str_2` (`str`),
-  KEY `md5` (`md5`),
-  KEY `ip` (`ip`)
+  KEY `md5` (`md5`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
