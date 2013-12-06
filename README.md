@@ -5,7 +5,7 @@ Database is MySQL, original data rendered in Python, server side code is PHP, th
 
 I've transfered the (old) project to github, and now making the code a bit nicer and more correct.
 
-See in action [here](http://reversemd5.com)
+See in action on [reversemd5.com](http://reversemd5.com)
 
 * * *
 ### Setup
@@ -15,16 +15,9 @@ See in action [here](http://reversemd5.com)
 * Copy [config.php.example](https://raw.github.com/danyshaanan/tcmount/master/config.php.example) to `config.php`, and modify the values.
 * Direct trafic to `/public/`
 
-
-```bash
-...
-```
-
-* * *
-### Info
-* ...
-* ...
+Once it is done, every string entered in the 'string to md5' input field will be sent to the server to be added to the database with its md5 sum.
 
 * * *
 ### Notes
-...
+* Modify `generateStrings.py` to generate any combination of your desired charset at your desired length.
+* ...
