@@ -10,9 +10,9 @@ See in action on [reversemd5.com](http://reversemd5.com)
 * * *
 ### Setup
 * Create a mysql database.
-* Import the schema into the database from either [initDB.sql](https://raw.github.com/danyshaanan/tcmount/master/mysql/initDB.sql), or [initializedDB.sql](https://raw.github.com/danyshaanan/tcmount/master/mysql(/initializedDB.sql).
-* Optional: Use [this Python script](https://raw.github.com/danyshaanan/tcmount/master/mysql/generateStrings.py) to generate some values into a file, and import it into your database. A bash cheatsheet is [here](https://raw.github.com/danyshaanan/tcmount/master/mysql/generateInitDBAndImportToMysql.sh)
-* Copy [config.php.example](https://raw.github.com/danyshaanan/tcmount/master/config.php.example) to `config.php`, and modify the values.
+* Import the schema into the database from either [initDB.sql](https://github.com/danyshaanan/reversemd5/blob/master/mysql/initDB.sql), or [initializedDB.sql](https://github.com/danyshaanan/reversemd5/blob/master/mysql/initializedDB.sql).
+* Optional: Use [this Python script](https://github.com/danyshaanan/reversemd5/blob/master/mysql/generateStrings.py) to generate some values into a file, and import it into your database. A bash cheatsheet is [here](https://github.com/danyshaanan/reversemd5/blob/master/mysql/generateInitDBAndImportToMysql.sh).
+* Copy [config.php.example](https://github.com/danyshaanan/reversemd5/blob/master/config.php.example) to `config.php`, and modify the values.
 * Direct trafic to `/public/`
 
 Once it is done, every string entered in the 'string to md5' input field will be sent to the server to be added to the database with its md5 sum.
