@@ -9,7 +9,7 @@ See in action [here](http://reversemd5.com)
 
 * * *
 ### Setup
-* Create a mysql database named `md5`. TODO: move name to config.
+* Create a mysql database.
 * Import the schema into the database from either [initDB.sql](https://raw.github.com/danyshaanan/tcmount/master/mysql/initDB.sql), or [initializedDB.sql](https://raw.github.com/danyshaanan/tcmount/master/mysql(/initializedDB.sql).
 * Optional: Use [this Python script](https://raw.github.com/danyshaanan/tcmount/master/mysql/generateStrings.py) to generate some values into a file, and import it into your database. A bash cheatsheet is [here](https://raw.github.com/danyshaanan/tcmount/master/mysql/generateInitDBAndImportToMysql.sh)
 * Copy [config.php.example](https://raw.github.com/danyshaanan/tcmount/master/config.php.example) to `config.php`, and modify the values.
