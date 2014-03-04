@@ -2,6 +2,7 @@
   "port": 8000,
   "mysql": {
     "host": "localhost",
+    "port": 3306,
     "user": "mojojojo",
     "password": "spaen",
     "database": "dbname"
