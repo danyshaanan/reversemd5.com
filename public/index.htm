@@ -37,7 +37,7 @@ var md5
 function md5Updated() {
   var md5val = md5.val().toLowerCase();
   if (!/^[a-f0-9]*$/i.test(md5val)) {
-    strres.html('md5 sum should be a hex string, meaning, composed only from 0-9 and a-f.');
+    strres.html('md5 sum should be a hex string, meaning, composed only of 0-9 and a-f.');
   } else if (md5val.length != 32) {
     strres.html([md5val.length, "/32 characters, ", 32 - md5val.length, " to go."].join(''));
   } else if (md5val == 'd41d8cd98f00b204e9800998ecf8427e') {
