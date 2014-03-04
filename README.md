@@ -14,6 +14,6 @@ and still being tested before deployment to the domain.
 * Import the schema into the database from either [initDB.sql](https://github.com/danyshaanan/reversemd5/blob/master/mysql/initDB.sql), or [initializedDB.sql](https://github.com/danyshaanan/reversemd5/blob/master/mysql/initializedDB.sql).
 * Optional: Use [this Python script](https://github.com/danyshaanan/reversemd5/blob/master/mysql/generateStrings.py) to generate some values into a file, and import it into your database. A bash cheatsheet is [here](https://github.com/danyshaanan/reversemd5/blob/master/mysql/generateInitDBAndImportToMysql.sh).
 * Copy [config.example.json](https://github.com/danyshaanan/reversemd5/blob/master/config.example.json) to `config.json`, and modify the values.
-* node reversemd5.js
+* `node reversemd5.js`
 
 Once it is done, every string entered in the 'string to md5' input field will be sent to the server to be added to the database with its md5 sum.
