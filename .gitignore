@@ -1,5 +1,6 @@
 
 *.swp
 config.json
+config.php
 node_modules
 .DS_Store
