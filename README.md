@@ -17,8 +17,3 @@ and still being tested before deployment to the domain.
 * node reversemd5.js
 
 Once it is done, every string entered in the 'string to md5' input field will be sent to the server to be added to the database with its md5 sum.
-
-* * *
-### Notes
-* Modify `generateStrings.py` to generate any combination of your desired charset at your desired length.
-* ...
