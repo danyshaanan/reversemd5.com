@@ -1,4 +1,33 @@
 {
+  "name": "reversemd5",
+  "version": "0.1.0",
+  "description": "A reverse-md5 lookup database that grows by user input",
+  "keywords": [
+    "md5",
+    "hash"
+  ],
+  "homepage": "https://github.com/danyshaanan/reversemd5",
+  "author": {
+    "name": "Dany Shaanan",
+    "email": "danyshaanan@gmail.com",
+    "url": "http://danyshaanan.com/"
+  },
+  "contributors": [],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/danyshaanan/reversemd5/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danyshaanan/reversemd5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danyshaanan/reversemd5",
+    "email": "danyshaanan@gmail.com"
+  },
+  "main": "./reversemd5.js",
   "dependencies": {
     "express": "~3.4.8",
     "mysql": "~2.1.0"
