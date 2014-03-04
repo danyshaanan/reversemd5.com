@@ -1,6 +1,0 @@
-<?php
-
-$SqlUser = 'mojojojo';
-$SqlPass = 'spaen';
-$SqlDB   = 'dbname';
-

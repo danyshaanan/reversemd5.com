@@ -32,7 +32,6 @@ var md5
   , str
   , md5res
   , strres
-  , phpPath = 'php/ajax.php'
   ;
 
 function md5Updated() {
@@ -45,7 +44,7 @@ function md5Updated() {
     strres.html('"" (Empty string)');
   } else {
     strres.html("Searching...");
-    $.post(phpPath, { md5 : md5val }, function(data) {
+    $.get('/get?md5=' + md5val, function(data) {
       strres.html(data ? ['"','"'].join(data.replace(/ /g,'&nbsp;')) : "Sorry, not found.");
     });
   }
@@ -55,7 +54,7 @@ function strUpdated() {
   var strval = str.val();
   var md5val = hex_md5(strval);
   md5res.text(['"','"'].join(md5val));
-  $.post(phpPath, { str : strval });
+  $.get('/set?str=' + strval);
 }
 
 $(function() {

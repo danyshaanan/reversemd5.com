@@ -1,9 +1,0 @@
-AddType application/x-httpd-php .php .html .htm	
-DirectoryIndex index.htm index.php
-Options -Indexes
-IndexIgnore *
-ErrorDocument 404 /404.htm
-
-
-
-
