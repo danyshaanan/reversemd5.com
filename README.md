@@ -1,12 +1,11 @@
 # reversemd5
 A reverse-md5 lookup database for the web, which adds user string-to-md5 queries to the the database.
 
-Database is MySQL, original data rendered in Python, server side code is PHP*, the client is HTML, CSS, and JavaScript, and uses AJAX for server queries.
+Database is MySQL, original data rendered in Python, server side code is ~~PHP*~~ Nodejs, the client is HTML, CSS, and JavaScript, and uses AJAX for server queries.
 
 See in action on [reversemd5.com](http://reversemd5.com)
 
-*reversemd5.com still runs php, while the code here is running Nodejs,
-and still being tested before deployment to the domain.
+(*PHP was replaced with Nodejs. For the PHP version, see [the 'php' branch](https://github.com/danyshaanan/reversemd5/tree/php))
 
 * * *
 ### Setup
