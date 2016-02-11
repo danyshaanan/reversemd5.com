@@ -6,6 +6,10 @@
     "md5",
     "hash"
   ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
   "homepage": "https://github.com/danyshaanan/reversemd5",
   "author": {
     "name": "Dany Shaanan",
