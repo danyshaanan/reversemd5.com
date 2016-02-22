@@ -7,10 +7,6 @@ var config = require('./config.json')
 
 var connection = mysql.createConnection(config.mysql)
 
-connection.connect(function(err) {
-  if (err) throw new Error(err)
-})
-
 var app = express()
 app.use(express.static(__dirname + '/public/', { index: 'index.htm' }))
 
