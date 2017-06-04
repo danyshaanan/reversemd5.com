@@ -35,5 +35,10 @@
   "dependencies": {
     "express": "~3.4.8",
     "mysql": "~2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "1.1.0",
+    "eslint-config-standard": "4.1.0",
+    "eslint-plugin-standard": "1.2.0"
   }
 }
