@@ -1,5 +1,5 @@
 # reversemd5
-A reverse-md5 lookup database for the web, which adds user string-to-md5 queries to the the database.
+A reverse-md5 lookup database for the web, which adds user string-to-md5 queries to the database.
 
 Database is MySQL, original data rendered in Python, server side code is ~~PHP*~~ Nodejs, the client is HTML, CSS, and JavaScript, and uses AJAX for server queries.
 
