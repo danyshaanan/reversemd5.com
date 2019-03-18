@@ -8,7 +8,7 @@ var config = require('./config.json')
 var connection = mysql.createConnection(config.mysql)
 
 var app = express()
-app.use(express.static(__dirname + '/public/', { index: 'index.htm' }))
+app.use(express.static(__dirname + '/public/', { index: 'index.htm' })) // eslint-disable-line no-path-concat
 
 app.get('/get', function(req, res) {
   var md5 = req.query.md5
