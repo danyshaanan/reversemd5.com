@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `md5`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `md5` (
-  `str` varchar(32) DEFAULT NULL,
+  `str` VARBINARY(32) DEFAULT NULL,
   `md5` varchar(32) DEFAULT NULL,
   UNIQUE KEY `str` (`str`),
   KEY `str_2` (`str`),
