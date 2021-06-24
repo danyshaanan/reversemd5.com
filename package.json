@@ -1,6 +1,6 @@
 {
   "name": "reversemd5",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A reverse-md5 lookup database that grows by user input",
   "keywords": [
     "md5",
